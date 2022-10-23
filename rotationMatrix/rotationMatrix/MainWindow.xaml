@@ -1,0 +1,44 @@
+﻿<Window x:Class="rotationMatrix.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:rotationMatrix"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="357*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnGenerateRM" Content="Generate Rotational Matrix" HorizontalAlignment="Left" Height="41" Margin="28,339,0,0" VerticalAlignment="Top" Width="177" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <Label x:Name="testLabel" Content="Rotational Matrix Calculator" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblX" Content="X" HorizontalAlignment="Left" Margin="38,41,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblY" Content="Y" HorizontalAlignment="Left" Margin="38,67,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblZ" Content="Z" HorizontalAlignment="Left" Margin="38,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.432,0.005"/>
+        <TextBox x:Name="txtXDeg" HorizontalAlignment="Left" Height="26" Margin="78,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Grid.ColumnSpan="2" TextChanged="txtXDeg_TextChanged"/>
+        <TextBox x:Name="txtYDeg" HorizontalAlignment="Left" Height="26" Margin="78,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="txtZDeg" HorizontalAlignment="Left" Height="26" Margin="78,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="txtblkOutput" HorizontalAlignment="Left" Height="414" Margin="248,0,0,0" TextWrapping="Wrap" Text="Output" VerticalAlignment="Center" Width="466" Grid.Column="1" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
+        <Label x:Name="testLabel_Copy" Content="Order of Rotation" HorizontalAlignment="Left" Margin="38,142,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblX_Copy" Content="*1" HorizontalAlignment="Left" Margin="38,165,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblY_Copy" Content=" 2" HorizontalAlignment="Left" Margin="38,191,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblZ_Copy" Content=" 3" HorizontalAlignment="Left" Margin="38,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.432,0.005"/>
+        <ComboBox x:Name="cmbxChoiceOne" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="26" Margin="78,165,0,0" VerticalAlignment="Top" Width="98" SelectionChanged="ComboBox_SelectionChanged" Cursor="Arrow">
+            <ComboBoxItem Content="X"/>
+            <ComboBoxItem Content="Z"/>
+            <ComboBoxItem Content="Y"/>
+        </ComboBox>
+        <ComboBox x:Name="cmbxChoiceTwo" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="26" Margin="78,196,0,0" VerticalAlignment="Top" Width="98" SelectionChanged="ComboBox_SelectionChanged" Cursor="Arrow">
+            <ComboBoxItem Content="X"/>
+            <ComboBoxItem Content="Z"/>
+            <ComboBoxItem Content="Y"/>
+        </ComboBox>
+        <ComboBox x:Name="cmbxChoiceThree" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="26" Margin="78,227,0,0" VerticalAlignment="Top" Width="98" SelectionChanged="ComboBox_SelectionChanged" Cursor="Arrow">
+            <ComboBoxItem Content="X"/>
+            <ComboBoxItem Content="Z"/>
+            <ComboBoxItem Content="Y"/>
+        </ComboBox>
+
+    </Grid>
+</Window>
